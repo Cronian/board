@@ -9,7 +9,7 @@
     <!-- config fragment 사용 -->
     <th:block th:replace="fragment/config :: configFragment" ></th:block>
   </head>
-  <body>
+  <body class="flex flex-col h-screen justify-between">
     <!-- header fragment 사용 -->
     <th:block th:replace="fragment/header :: headerFragment"></th:block>
 
@@ -17,8 +17,9 @@
        content fragment 사용
        현재 layout을 사용하는 content fragment의 내용을 삽입한다.
     -->
-    <th:block layout:fragment="content"></th:block>
-
+    <div class="mb-auto h-full bg-gray-100">
+      <th:block layout:fragment="content"></th:block>
+    </div>
     <!-- footer fragment 사용 -->
     <th:block th:replace="fragment/footer :: footerFragment"></th:block>
   </body>
